@@ -1,0 +1,3 @@
+<node pkg="turtlesim" type="turtlesim" name="turtlesim">
+  <param name="background_b" value="0">
+</node>
