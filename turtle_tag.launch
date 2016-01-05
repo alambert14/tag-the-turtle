@@ -1,0 +1,28 @@
+<launch>
+  <group ns="turtlesim1">
+    <node pkg="turtlesim" name="evader" type="turtlesim_node">
+      <param name="background_b" type="int" value="100" />
+      <param name="background_g" type="int" value="0" />
+      <param name="background_r" type="int" value="255" />
+    </node>
+  </group>
+ <node pkg="turtle_tag" type="spawn.py" name="spawnturtle" />
+
+<!-- <node pkg="turtle_tag" type="mimic.cpp" name="mimic" /> -->
+ <group ns="teleop">
+    <node pkg="turtlesim" name="teleop" type="turtle_teleop_key" />
+  </group> 
+
+
+ <!-- <group ns="turtlesim2">
+    <node pkg="turtlesim" name="chaser" type="turtlesim_node" />
+  </group>
+
+  <group ns="copy">
+    <node pkg="turtle_tag" name="mimic" type="mimic.py">
+      <remap from="input" to="turtlesim1/evader/cmd_vel" />
+      <remap from="output" to="turtlesim2/chaser/cmd_vel" />
+    </node>
+  </group> -->
+
+</launch>
